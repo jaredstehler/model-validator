@@ -39,14 +39,6 @@ public class ValidationResult {
 		if(val == null || ( val instanceof String && ((String) val).trim().length() == 0 )){
 			rejectField(field, String.format("%s is required", name));
 		}
-		else {
-//			if( ManagedEntity.class.isAssignableFrom(val.getClass()) ){
-//				ManagedEntity entity = (ManagedEntity) val;
-//				if( entity.getId() == null ){
-//					rejectField(field, String.format("%s is required", name));
-//				}
-//			}
-		}
 		
 		return this;
 	}
