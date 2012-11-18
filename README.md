@@ -1,4 +1,4 @@
-jaxrs-model-validator
+model-validator
 =====================
 
 A light-weight validation framework for Java; meant to be useful for a web service wanting to return a rich response containing general validation failures as well as specific field names which have failed validation.
