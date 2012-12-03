@@ -49,3 +49,18 @@ Finally, inject the Validators instance into services which need it (e.g. reposi
         validators.validate(myInstance);
         db.save(myInstance);
     }
+
+### Let Jersey do the REST (haha) ###
+
+Since ValidationException extends from WebApplicationException, when an instance of it propagates out past the resource method, it will return as a jackson-serialized entity to the client.
+
+    {
+      "message": "Please correct errors in the form and resubmit.",
+      "generalErrors":[],
+      "fields":[
+        {
+          "field":"email",
+          "message":"An account with this email address already exists."
+        }
+      ]
+    }
