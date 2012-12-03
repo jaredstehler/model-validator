@@ -1,14 +1,12 @@
 package com.fiestacabin.model.validator;
 
-import static org.codehaus.jackson.map.annotate.JsonSerialize.Inclusion.NON_NULL;
-
 import java.util.List;
 
-import org.codehaus.jackson.map.annotate.JsonSerialize;
-
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.google.common.collect.Lists;
 
-@JsonSerialize(include=NON_NULL)
+@JsonInclude(Include.NON_NULL)
 public class ValidationResult {
 
 	private String message;
