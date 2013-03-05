@@ -1,5 +1,7 @@
 package com.fiestacabin.model.validator;
 
+import com.google.common.base.Objects;
+
 
 
 public class InvalidField {
@@ -19,4 +21,12 @@ public class InvalidField {
 		return message;
 	}
 
+	@Override
+	public String toString() {
+		return Objects.toStringHelper(this)
+				.add("field", field)
+				.add("message", message)
+				.toString();
+	}
+	
 }
