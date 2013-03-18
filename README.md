@@ -12,6 +12,14 @@ The framework consists of an annotation used to define a method which can valida
 Usage
 -----
 
+### Maven Central Dependency ###
+
+    <dependency>
+        <groupId>com.fiestacabin.model</groupId>
+        <artifactId>model-validator</artifactId>
+        <version>0.0.2</version>
+    </dependency>
+
 ### Write your Validator methods ###
 
 In any java class, add a validation method, and mark it as such with the @Validates annotation, which declares what type is validated by that method. This method can take one of two forms.
